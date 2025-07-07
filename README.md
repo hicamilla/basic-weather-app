@@ -1,11 +1,11 @@
-# Weather App (First Version | Basic)
+# Weather App (first Version | Basic) 
 
 ## Description
-A simple, beginner-friendly weather app built with HTML, CSS, and JavaScript. It allows the user to simulate weather updates by entering a city and temperature. This project was created as part of the SheCodes Workshop to practice JavaScript fundamentals such as DOM manipulation and user input handling.
+A simple, beginner-friendly weather app built with HTML, CSS, and JavaScript. It allows the user to simulate weather updates by entering a city and temperature. This project was created as part of the SheCodes Workshop to practice JavaScript fundamentals, including DOM manipulation and user input handling.
 
 ## Features
 - Displays current temperature and city
-- Allows the user to update city and temperature via prompt
+- Allows the user to update the city and temperature via a prompt
 - Static 3-day forecast preview
 - Simple CSS styling and layout
 - Emoji-based weather icons
