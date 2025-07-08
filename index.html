@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="A simple weather app to practice JavaScript. Built by Camilla C.">
+  <title>Weather App</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    
+    body{
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1,
+    h2,
+    h4{
+      text-align: center;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+
+    h1{
+      color:darkslategrey;
+      font-size: 46px;
+      line-height: 50px;
+      margin:0;
+    }
+
+    h2{
+      margin: 0;
+      padding-top: 15px;
+      font-size: 34px;
+      line-height: 48px;
+      font-weight: 400;
+    }
+
+    h4{
+      margin:0;
+      font-size: 27px;
+      line-height: 48px;
+      font-weight: 600;
+    }
+    ul{
+      padding:10px;
+      
+    }
+
+    li{
+      list-style: none;
+      text-align: center;
+      padding: 10px 0;
+      border-radius: 10px;
+      transition: all 200ms ease-in-out;
+      max-width: 400;
+      margin: 10px auto;
+    }
+
+    li:hover{
+      background:#fffbef;
+    }
+
+    p{
+      font-size:19px;
+      text-align: center;
+      font-family: monospace;
+    }
+
+    .end{
+    font-size: 12px;
+      opacity: 0.7;
+      text-align: center;
+      font-family: monospace;
+    }
+
+    button{
+      display: block;
+      margin: 20px auto;
+      border: 1px solid cornflowerblue;
+      background: cornflowerblue;
+      font-size: 18px;
+      text-transform: uppercase;
+      color:#fffbef;
+      font-weight: 600;
+      line-height: 25px;
+      padding: 16px 24px;
+      border-radius: 20px;
+      transition: all 200ms ease;
+      box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+      cursor: pointer;
+    }
+
+    button:hover{
+      background: white;
+      color: cornflowerblue;
+      border: none;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <h1>
+    🌤️
+    <br/>
+    Currently <strong>21°C</strong> in Tokyo
+  </h1>
+  <h2>
+    13° / <strong>23°</strong> 
+  </h2>
+  <ul>
+    <li>
+      <h4>
+        ⛈️ 
+        Tomorrow
+      </h4>
+      <p>10° / <strong> 22°</strong></p>
+    </li>
+    <li>
+      <h4>
+        ☀️
+        Saturday
+      </h4>
+      <p>15° / <strong>17°</strong></p>
+    </li>
+    <li>
+      <h4>
+        🌦️
+        Sunday
+      </h4>
+      <p>8° / <strong>15°</strong></p>
+    </li>
+  </ul>
+  <button>
+    Change City
+  </button>
+  <p class="end">Coded by Camilla C.</p>
+  </main>
+</body>
+<script>
+  function changeCity (){
+    let city = prompt ("What city do you live in?");
+    let temperature = prompt ("What is the temperature now?");
+    let heading = document.querySelector("h1");
+    if (temperature < 0){
+      heading.innerHTML = "🥶 <br /> Currently " + temperature + "°C in " + city;
+    } else {
+      heading.innerHTML = "😎 <br /> Currently " + temperature + "°C in " + city;
+    }
+  }
+  let changeButton = document.querySelector("button");
+  changeButton.addEventListener("click", changeCity);
+</script>
+</html>
